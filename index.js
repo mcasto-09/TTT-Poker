@@ -1,6 +1,6 @@
 let player = 'x'
 
-function play () {
+function play (event) {
     if (player === 'x') {
         player = 'o'
     } else {
@@ -8,6 +8,8 @@ function play () {
     }
     let span = document.querySelector('#current-player')
     span.innerText = player;
+    const targetSqr = event.target
+    targetSqr.innerText = player
 }
 
 let squares = document.querySelectorAll('.square')
